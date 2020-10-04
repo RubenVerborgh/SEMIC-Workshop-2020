@@ -12,6 +12,11 @@ p.venue {
   font-style: italic;
 }
 
+.faded {
+  opacity: .2;
+  filter: contrast(1.1);
+}
+
 .slide.cover h2 {
   text-shadow: -1.5px -1.5px 0 white,
                 1.5px -1.5px 0 white,
