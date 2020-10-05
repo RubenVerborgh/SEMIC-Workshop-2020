@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Solid: Concept &amp; Architecture</title>
+  <title>Decentralising personal data management with Solid: a hands-on workshop</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -10,7 +10,7 @@
 </head>
 <body class="shower list">
   <header class="caption">
-    <h1>Solid: Concept &amp; Architecture</h1>
+    <h1>Decentralising personal data management with Solid:<br> a hands-on workshop</h1>
     <p>
       <a href="https://ruben.verborgh.org/">Ruben Verborgh</a>,
       <a href="http://www.ugent.be/">Ghent University</a> –
@@ -1099,6 +1099,178 @@
     <h2>Solid:<br> Concept &amp; Architecture</h2>
     <p class="author"><a href="https://twitter.com/RubenVerborgh">@RubenVerborgh</a></p>
     <p class="affiliation"><a href="https://ruben.verborgh.org/">ruben.verborgh.org</a></p>
+  </div>
+
+  <div class="title slide" id="hands-on">
+    <h2>Solid:<br> Hands-on experience</h2>
+    <p class="author">Ruben Verborgh</p>
+    <p class="affiliation">Ghent University – imec</p>
+  </div>
+
+  <div class="slide" id="warning">
+    <h2>
+      Warning: Solid client-side apps<br>
+      are rough around the edges.
+    </h2>
+    <ul>
+      <li>
+        Be prepared to see bugs.
+        <ul>
+          <li>When in doubt, refresh the page.</li>
+        </ul>
+      </li>
+      <li>This is not representative of the final experience.</li>
+      <li>
+        It is a technology demo, focused on <em>understanding</em>.
+        <ul>
+          <li>Watch and learn how data flows.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide" id="create-pod">
+    <h2>
+      Create your own Solid pod<br>
+      with a provider of your choice.
+    </h2>
+    <ul>
+      <li>
+        Host <a href="https://github.com/solid/node-solid-server/">Solid server software</a> yourself.
+      </li>
+      <li>
+        Use free demo hosting.
+        <ul>
+          <li><a href="https://inrupt.net/">https://inrupt.net/</a></li>
+          <li><a href="https://solid.community/">https://solid.community/</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide" id="webid-storage">
+    <h2>
+      You have now created a WebID<br>
+      and storage location for yourself.
+    </h2>
+    <ul>
+      <li>
+        In Solid, those are <em>separate</em> things:
+        <ul>
+          <li>
+            a <strong>URL</strong> identifying you
+            <ul>
+              <li><a href="https://ruben.verborgh.org/profile/#me">https://ruben.verborgh.org/profile/#me</a></li>
+            </ul>
+          </li>
+          <li>
+            a <strong>space</strong> to store documents
+            <ul>
+              <li><a href="https://drive.verborgh.org/">https://drive.verborgh.org/</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        You <em>happen</em> to have received both at the same time.
+        <ul>
+          <li>But there is no need to!</li>
+          <li>You can reuse an existing identity and log in with it.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide" id="profile">
+    <h2>
+      Log in to your own pod<br>
+      and edit your own profile.
+    </h2>
+    <ol>
+      <li>
+        Go to the homepage of your newly created pod.
+        <ul>
+          <li><a href="https://rubenv-semic-2020.inrupt.net/">https://rubenv-semic-2020.inrupt.net/</a></li>
+        </ul>
+      </li>
+      <li>
+        Click <em>Log in</em> and pick your provider.
+      </li>
+      <li>
+        Click <em>Edit your profile</em>.
+        <ul>
+          <li>Fill out some basic information.</li>
+          <li>Bonus points for a profile picture!</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="slide" id="permissions">
+    <h2>
+      Give specific apps permission<br>
+      to act on your behalf.
+    </h2>
+    <p>
+      This bit <em>should</em> happen through a dialog,<br>
+      but we found some issues when testing.
+    </p>
+    <ol>
+      <li>Click <em>Preferences</em> on your pod homepage.</li>
+      <li>
+        Add <em>Application URLs</em> with <em>Read/Write/Append</em>:
+        <ul>
+          <li><code>https://idlabresearch.github.io</code></li>
+          <li><code>https://rubenv-semic-2020.inrupt.net</code></li>
+        </ul>
+      </li>
+      <li>
+        It should look <em>exactly</em>
+        like <a href="images/permissions.png">this</a>
+        <em>(no slash at the end)</em>.
+      </li>
+    </ol>
+  </div>
+
+  <div class="slide" id="chat">
+    <h2>
+      Join me on a Solid chat<br>
+      hosted on my own pod.
+    </h2>
+    <ol>
+      <li>Visit <a href="https://rubenv-semic-2020.inrupt.net/public/chat/">the chat</a> that I am hosting on my pod.</li>
+      <li>
+        Log in.
+        <ul>
+          <li>Ignore any warnings.</li>
+          <li>I have given append permissions to logged-in users.</li>
+        </ul>
+      </li>
+      <li>
+        Send a chat message.
+        <ul>
+          <li>Now I know your WebID for reuse later on.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="slide" id="marriage">
+    <h2>
+      Let us used Linked Data<br>
+      to connect people.
+    </h2>
+    <ol>
+      <li>Open the <a href="https://idlabresearch.github.io/Solid-Marriage-Demo/#/help">instructions</a>.</li>
+      <li>Open the <a href="https://idlabresearch.github.io/Solid-Marriage-Demo/">app</a>.</li>
+      <li>
+        Follow the instructions.
+        <ul>
+          <li>Keep a close eye on your data as you progress.</li>
+          <li>Keep a close eye on your inbox.</li>
+        </ul>
+      </li>
+    </ol>
   </div>
 
   <footer>
